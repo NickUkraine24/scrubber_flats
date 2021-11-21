@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Flats OLX</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>name</td>
+      <td>price</td>
+      <td>link</td>
+      <td>date</td>
+      <td>photo</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data.drop(1).each do |flat| %>
+      <tr>
+        <td><%= flat[0] %></td>
+        <td><%= flat[1] %></td>
+        <td><%= link_to flat[2] %></td>
+        <td><%= flat[4] %></td>
+        <td><%= image_tag flat[5], style: 'height:70%; width:70%;' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Table', new_table_path %>
